@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextLogin" prefHeight="690.0" prefWidth="1300.0" style="-fx-background-color: linear-gradient(#E36B89 , #FCC7CF);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginWindowController">
+   <children>
+      <StackPane layoutX="300.0" layoutY="225.0" styleClass="rounded-corners" stylesheets="@../Style.css" AnchorPane.bottomAnchor="465.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="1000.0" AnchorPane.topAnchor="225.0" />
+      <ImageView fitHeight="723.0" fitWidth="1300.0" layoutY="-16.0" opacity="0.18" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/back2.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="613.0" layoutY="30.0" opacity="0.8" prefHeight="623.0" prefWidth="632.0" style="-fx-background-color: white; -fx-background-radius: 2.5em;">
+         <children>
+            <JFXTextField fx:id="txtusername" focusColor="#d85678" labelFloat="true" layoutX="83.0" layoutY="227.0" prefHeight="44.0" prefWidth="491.0" promptText="Username" style="-fx-background-color: #FDE3E6; -fx-background-radius: 1em;" unFocusColor="#d85678">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <FontAwesomeIconView glyphName="USER" layoutX="50.0" layoutY="258.0" size="25" />
+            <FontAwesomeIconView glyphName="LOCK" layoutX="52.0" layoutY="354.0" size="25" />
+            <JFXPasswordField fx:id="password" focusColor="#d85678" labelFloat="true" layoutX="83.0" layoutY="324.0" prefHeight="44.0" prefWidth="491.0" promptText="Password" style="-fx-background-color: #FDE3E6; -fx-background-radius: 1EM;" unFocusColor="#d85678">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton buttonType="RAISED" layoutX="214.0" layoutY="470.0" onAction="#login" prefHeight="50.0" prefWidth="204.0" style="-fx-background-color: #ff7197; -fx-background-radius: 0.5em;" text="Log in" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="24.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="111.0" fitWidth="108.0" layoutX="256.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo3.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="256.0" layoutY="135.0" prefHeight="30.0" prefWidth="120.0" text="USER LOGIN " textFill="#e13462">
+               <font>
+                  <Font name="Segoe UI Semibold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbError" layoutX="210.0" layoutY="416.0" prefHeight="19.0" prefWidth="212.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="361.0" fitWidth="370.0" layoutX="127.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="187.0" layoutY="449.0" prefHeight="70.0" prefWidth="240.0" text="WELCOME" textFill="#e13462">
+         <font>
+            <Font name="Segoe UI Semibold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="506.0" prefHeight="26.0" prefWidth="442.0" text="PUDDINGS &amp; CAKES COMPANY MANAGEMENT SYSTEM" textFill="#e13462">
+         <font>
+            <Font name="Segoe UI Semibold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

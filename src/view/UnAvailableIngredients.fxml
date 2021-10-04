@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextUpdateOrder" prefHeight="697.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UnAvailableIngredientsController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="68.0" prefWidth="1075.0" style="-fx-background-color: #ffbfd1;">
+         <children>
+            <ImageView fitHeight="57.0" fitWidth="51.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="40.0" text="Puddings &amp; Cakes Companay Management System">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="75.0" layoutY="9.0" prefHeight="38.0" prefWidth="237.0" text="UNAVAILABLE LIST">
+         <font>
+            <Font name="Segoe UI Semibold" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbTime" layoutX="921.0" layoutY="15.0" text="12 : 10 : 00 PM ">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbDate" layoutX="974.0" layoutY="39.0" text="2021.08.17">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblUnavailable" layoutX="47.0" layoutY="140.0" prefHeight="486.0" prefWidth="981.0" stylesheets="@../Style.css">
+         <columns>
+            <TableColumn fx:id="colIngreID" prefWidth="112.0" text="Ingredient ID" />
+            <TableColumn fx:id="colName" prefWidth="299.0" text="Ingredient Name" />
+            <TableColumn fx:id="colUnit" prefWidth="196.0" text="Unit" />
+            <TableColumn fx:id="colqty" prefWidth="182.0" text="Restore QTY" />
+            <TableColumn fx:id="colPrice" prefWidth="190.0" text="Unit Price" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnGetList" buttonType="RAISED" layoutX="919.0" layoutY="638.0" onMouseClicked="#getUnavalablelist" prefHeight="28.0" prefWidth="109.0" style="-fx-background-color: #ff7197;" text="Get The List" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="47.0" layoutY="91.0" text="Unavailable List" textFill="#ff7197">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="YearlyIncome" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="44ac0aaa-e3be-474d-8bb8-d0baddec1091">
+	<parameter name="sales" class="java.lang.String"/>
+	<parameter name="expenses" class="java.lang.String"/>
+	<parameter name="salary" class="java.lang.String"/>
+	<parameter name="profit" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="129" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="23" width="228" height="20" uuid="583681c1-4312-414c-bf0d-17d7e112265e"/>
+				<textElement>
+					<font fontName="Segoe UI Semilight" size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Puddings & Cakes Companay Management System]]></text>
+			</staticText>
+			<line>
+				<reportElement x="139" y="92" width="270" height="1" uuid="c24db2b2-b18b-4016-b25d-55ab14288c84"/>
+			</line>
+			<staticText>
+				<reportElement x="172" y="70" width="208" height="30" uuid="586e4175-8024-4cc4-8a5e-ad45b0461423"/>
+				<textElement>
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Yearly Income Report]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="455" y="0" width="100" height="22" uuid="ad509a53-d672-4733-8a89-01e3bc90459f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="39" y="-1" width="181" height="30" uuid="e9ef44d2-cc41-4757-9474-665f8cca244d"/>
+				<textElement>
+					<font fontName="Segoe UI Semibold" size="19" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PUDINGS & CAKES]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="40" height="36" uuid="f59e1852-3813-4dc6-8dbe-0663fe698395"/>
+				<imageExpression><![CDATA["assets/logo3.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<summary>
+		<band height="270" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="33" width="140" height="30" uuid="2c4d0a4e-dfa5-469c-91fe-5cb7ed3cdac3"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Yearly Profit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="80" width="180" height="30" uuid="f5b253df-cdc6-4199-ae0f-644b5ff18a51"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="110" width="180" height="30" uuid="24b81644-d848-42f5-a2cd-33f36e6d7aaa"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Expenses]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="171" width="180" height="30" uuid="de8a6404-3707-4de3-9ad1-0c5dd2c8991d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Yearly Profit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="140" width="180" height="30" uuid="4794632a-6a25-43ee-b8e1-52862612609d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Salary expenses]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="318" y="170" width="132" height="30" uuid="7526d7ef-6309-48af-8439-d644c4a0b2e2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{profit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="140" width="132" height="30" uuid="f019eca6-083d-4165-a865-a69e49e88ac0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{salary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="110" width="132" height="30" uuid="a5daf48f-51b3-4a34-b6b3-6fd58f62ccd1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{expenses}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="80" width="132" height="30" uuid="f050b5c3-f09a-46ce-af76-906899243699"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sales}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="97" y="170" width="353" height="1" uuid="709e8a37-60e6-4fc2-b7d6-d98e533c8524"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="240" width="555" height="30" uuid="1553ed9d-988f-4986-90a3-809308c9d4bc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Puddings & Cakes Companay Management System]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="80" width="37" height="30" uuid="d0a28b8a-cd63-4a14-9990-0408afa6269d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="110" width="37" height="30" uuid="380529c0-8148-4872-b7e4-270343ec1c3e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="140" width="37" height="30" uuid="8f0c5b1c-124c-4f26-891c-abe9b0013c23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="170" width="37" height="30" uuid="971ef953-fbfd-4145-9d3c-0b080acb1e56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

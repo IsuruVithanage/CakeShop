@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextUpdateOrder" prefHeight="697.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IncomeWindowController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="68.0" prefWidth="1075.0" style="-fx-background-color: #ffbfd1;">
+         <children>
+            <ImageView fitHeight="57.0" fitWidth="51.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="40.0" text="Puddings &amp; Cakes Companay Management System">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="75.0" layoutY="9.0" prefHeight="38.0" prefWidth="241.0" text="COMPANY INCOME">
+         <font>
+            <Font name="Segoe UI Semibold" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbTime" layoutX="921.0" layoutY="15.0" text="12 : 10 : 00 PM ">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbDate" layoutX="974.0" layoutY="39.0" text="2021.08.17">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <BarChart fx:id="incomebarchart" layoutX="38.0" layoutY="294.0" prefHeight="372.0" prefWidth="686.0" title="MONTHLY INCOME">
+        <xAxis>
+          <CategoryAxis label="MONTH" side="BOTTOM">
+               <tickLabelFont>
+                  <Font size="7.0" />
+               </tickLabelFont></CategoryAxis>
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="INCOME" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <AnchorPane layoutX="85.0" layoutY="124.0" prefHeight="118.0" prefWidth="237.0" style="-fx-background-color: FCC7CF; -fx-background-radius: 2em;">
+         <children>
+            <Label layoutX="24.0" layoutY="14.0" prefHeight="20.0" prefWidth="184.0" text="CURRENT MONTH INCOME">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="14.0" layoutY="34.0" prefHeight="5.0" prefWidth="210.0" style="-fx-background-color: #ff5688;" />
+            <Label fx:id="lbMonthlyIncome" layoutX="46.0" layoutY="46.0" prefHeight="45.0" prefWidth="152.0" text="000">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="426.0" layoutY="124.0" prefHeight="118.0" prefWidth="237.0" style="-fx-background-color: FDE3E6; -fx-background-radius: 2em;">
+         <children>
+            <Label layoutX="36.0" layoutY="14.0" prefHeight="20.0" prefWidth="167.0" text="CURRENT YEAR INCOMR">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="14.0" layoutY="34.0" prefHeight="5.0" prefWidth="210.0" style="-fx-background-color: #ff5688;" />
+            <Label fx:id="lbYealyIncome" layoutX="36.0" layoutY="46.0" prefHeight="45.0" prefWidth="177.0" text="000">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="774.0" layoutY="124.0" prefHeight="118.0" prefWidth="237.0" style="-fx-background-color: FCC7CF; -fx-background-radius: 2em;">
+         <children>
+            <Label layoutX="36.0" layoutY="14.0" prefHeight="20.0" prefWidth="167.0" text="CURRENT YEAR PROFIT">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="14.0" layoutY="34.0" prefHeight="5.0" prefWidth="210.0" style="-fx-background-color: #ff5688;" />
+            <Label fx:id="lbYearProft" layoutX="30.0" layoutY="47.0" prefHeight="45.0" prefWidth="177.0" text="000">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="762.0" layoutY="338.0" prefHeight="118.0" prefWidth="286.0" style="-fx-background-color: FDE3E6; -fx-background-radius: 2em;">
+         <children>
+            <Label layoutX="22.0" layoutY="14.0" prefHeight="20.0" prefWidth="128.0" text="MONTHLY REPORT">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="21.0" layoutY="34.0" prefHeight="5.0" prefWidth="161.0" style="-fx-background-color: #ff5688;" />
+            <JFXComboBox fx:id="cmbMonth" focusColor="#ff7197" layoutX="22.0" layoutY="59.0" prefHeight="25.0" prefWidth="114.0" promptText="Month" unFocusColor="#ff7197" />
+            <JFXButton fx:id="monthlyReport" buttonType="RAISED" layoutX="149.0" layoutY="61.0" onMouseClicked="#getMonthlyReport" prefHeight="28.0" prefWidth="114.0" style="-fx-background-color: #ff7197;" text="REPORT" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="762.0" layoutY="492.0" prefHeight="118.0" prefWidth="286.0" style="-fx-background-color: FDE3E6; -fx-background-radius: 2em;">
+         <children>
+            <Label layoutX="22.0" layoutY="14.0" prefHeight="20.0" prefWidth="128.0" text="YEARLY REPORT">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="21.0" layoutY="34.0" prefHeight="5.0" prefWidth="161.0" style="-fx-background-color: #ff5688;" />
+            <JFXComboBox fx:id="cmbYear" focusColor="#ff7197" layoutX="22.0" layoutY="59.0" prefHeight="25.0" prefWidth="99.0" promptText="Year" unFocusColor="#ff7197" />
+            <JFXButton fx:id="yealyReportBTN" buttonType="RAISED" layoutX="149.0" layoutY="61.0" onMouseClicked="#getYearlyReport" prefHeight="28.0" prefWidth="114.0" style="-fx-background-color: #ff7197;" text="REPORT" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

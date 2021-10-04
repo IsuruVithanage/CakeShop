@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextUpdateOrder" prefHeight="697.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="68.0" prefWidth="1075.0" style="-fx-background-color: #ffbfd1;">
+         <children>
+            <ImageView fitHeight="57.0" fitWidth="51.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="40.0" text="Puddings &amp; Cakes Companay Management System">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="75.0" layoutY="9.0" prefHeight="38.0" prefWidth="237.0" text="DASHBOARD">
+         <font>
+            <Font name="Segoe UI Semibold" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbTime" layoutX="921.0" layoutY="15.0" text="12 : 10 : 00 PM ">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbDate" layoutX="974.0" layoutY="39.0" text="2021.08.17">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <BarChart fx:id="ingreGraph" layoutX="38.0" layoutY="271.0" prefHeight="400.0" prefWidth="649.0" stylesheets="@../Style.css" title="STOCK">
+        <xAxis>
+          <CategoryAxis label="INGREDIENT ID" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="QTY ON HAND" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <AnchorPane layoutX="75.0" layoutY="114.0" prefHeight="118.0" prefWidth="237.0" style="-fx-background-color: FCC7CF; -fx-background-radius: 2em;">
+         <children>
+            <Label layoutX="24.0" layoutY="14.0" prefHeight="20.0" prefWidth="184.0" text="TOTAL DELIVERED ORDERS">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="14.0" layoutY="34.0" prefHeight="5.0" prefWidth="210.0" style="-fx-background-color: #ff5688;" />
+            <Label fx:id="lbDeliOrders" layoutX="80.0" layoutY="45.0" prefHeight="51.0" prefWidth="72.0" text="000">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="412.0" layoutY="114.0" prefHeight="118.0" prefWidth="237.0" style="-fx-background-color: FDE3E6; -fx-background-radius: 2em;">
+         <children>
+            <Label layoutX="52.0" layoutY="14.0" prefHeight="20.0" prefWidth="134.0" text="WORKING ORDERS">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="21.0" layoutY="32.0" prefHeight="5.0" prefWidth="194.0" style="-fx-background-color: #ff5688;" />
+            <Label fx:id="lbWorkOrder" layoutX="80.0" layoutY="45.0" prefHeight="51.0" prefWidth="72.0" text="000">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="757.0" layoutY="114.0" prefHeight="118.0" prefWidth="237.0" style="-fx-background-color: FCC7CF; -fx-background-radius: 2em;">
+         <children>
+            <Label layoutX="46.0" layoutY="14.0" prefHeight="20.0" prefWidth="146.0" text="MOUNTHLY INCOME">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="14.0" layoutY="34.0" prefHeight="5.0" prefWidth="210.0" style="-fx-background-color: #ff5688;" />
+            <Label fx:id="ibIncome" layoutX="46.0" layoutY="39.0" prefHeight="59.0" prefWidth="163.0" text="00000">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <PieChart fx:id="pieChart" layoutX="687.0" layoutY="261.0" prefHeight="400.0" prefWidth="365.0" title="Product Sales" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextPlaceOrder" prefHeight="697.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WorkerDetailController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="68.0" prefWidth="1075.0" style="-fx-background-color: #ffbfd1;">
+         <children>
+            <Label layoutX="66.0" layoutY="9.0" prefHeight="36.0" prefWidth="283.0" text="WORKER DETAILS">
+               <font>
+                  <Font name="Segoe UI Semibold" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="57.0" fitWidth="51.0" layoutX="7.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label fx:id="lbTime" layoutX="921.0" layoutY="15.0" text="12 : 10 : 00 PM ">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbDate" layoutX="974.0" layoutY="39.0" text="2021.08.17">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="88.0" text="Worker Details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="126.0" text="Worker ID :" textFill="#ff7197">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbWorkerID" layoutX="143.0" layoutY="128.0" text="W-001">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtWorkerName" layoutX="237.0" layoutY="123.0" prefHeight="27.0" prefWidth="222.0" promptText="Worker Name" style="-fx-background-color: white; -fx-border-color: #ff7197;" />
+      <Label fx:id="lbname" layoutX="237.0" layoutY="97.0" text="Worker Name" textFill="#ff7197">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNIC" layoutX="627.0" layoutY="123.0" prefHeight="27.0" prefWidth="152.0" promptText="NIC" style="-fx-background-color: white; -fx-border-color: #ff7197;" />
+      <Label fx:id="lbnic" layoutX="627.0" layoutY="97.0" text="NIC" textFill="#ff7197">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbcontact" layoutX="470.0" layoutY="98.0" text="Contact" textFill="#ff7197">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtContact" layoutX="470.0" layoutY="123.0" prefHeight="27.0" prefWidth="146.0" promptText="Contact" style="-fx-background-color: white; -fx-border-color: #ff7197;" />
+      <TableView fx:id="tblWorker" layoutX="17.0" layoutY="257.0" prefHeight="415.0" prefWidth="1045.0" stylesheets="@../Style.css">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="91.0" text="Worker ID" />
+            <TableColumn fx:id="colName" prefWidth="201.0" text="Worker Name" />
+            <TableColumn fx:id="colContact" prefWidth="122.0" text="Contact" />
+            <TableColumn fx:id="colNIC" prefWidth="129.0" text="NIC" />
+            <TableColumn fx:id="colAddress" prefWidth="200.0" text="Address" />
+            <TableColumn fx:id="colBank" prefWidth="139.0" text="Bank Account Number" />
+            <TableColumn fx:id="colAvailabilyty" prefWidth="82.0" text="Availability" />
+            <TableColumn fx:id="colRemove" prefWidth="79.0" text="Remove" />
+         </columns>
+      </TableView>
+      <Label layoutX="16.0" layoutY="220.0" text="Workers" textFill="#ff7197">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="addbtn" buttonType="RAISED" layoutX="495.0" layoutY="179.0" onMouseClicked="#addWorker" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #ff7197;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="updatebtn" buttonType="RAISED" layoutX="590.0" layoutY="179.0" onMouseClicked="#updateWorker" prefHeight="28.0" prefWidth="89.0" style="-fx-background-color: #ff7197;" text="UPDATE" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtBank" layoutX="791.0" layoutY="123.0" prefHeight="27.0" prefWidth="222.0" promptText="Address" style="-fx-background-color: white; -fx-border-color: #ff7197;" />
+      <Label fx:id="lbbank" layoutX="791.0" layoutY="98.0" text="Bank Account Number" textFill="#ff7197">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="37.0" text="Puddings &amp; Cakes Companay Management System">
+         <font>
+            <Font name="Segoe UI Semibold Italic" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddress" layoutX="53.0" layoutY="179.0" prefHeight="27.0" prefWidth="411.0" promptText="Worker Name" style="-fx-background-color: white; -fx-border-color: #ff7197;" />
+      <Label fx:id="lbaddress" layoutX="53.0" layoutY="156.0" text="Address" textFill="#ff7197">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

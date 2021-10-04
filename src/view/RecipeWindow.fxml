@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextPlaceOrder" prefHeight="697.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RecipeWindowController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="68.0" prefWidth="1085.0" style="-fx-background-color: #ffbfd1;">
+         <children>
+            <Label layoutX="66.0" layoutY="9.0" prefHeight="36.0" prefWidth="283.0" text="RECIPES">
+               <font>
+                  <Font name="Segoe UI Semibold" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="57.0" fitWidth="51.0" layoutX="7.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label fx:id="lbTime" layoutX="921.0" layoutY="15.0" text="12 : 10 : 00 PM ">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbDate" layoutX="974.0" layoutY="39.0" text="2021.08.17">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="88.0" text="Select Cake">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUnitPrice" disable="true" layoutX="543.0" layoutY="208.0" prefHeight="27.0" prefWidth="98.0" promptText="Unite Price" style="-fx-background-color: white; -fx-border-color: #ff7197;" />
+      <TableView fx:id="tblRecipe" layoutX="56.0" layoutY="293.0" prefHeight="363.0" prefWidth="938.0" stylesheets="@../Style.css">
+         <columns>
+            <TableColumn fx:id="colIngreID" prefWidth="141.0" text="Ingredient ID" />
+            <TableColumn fx:id="colName" prefWidth="259.0" text="Ingredient Name" />
+            <TableColumn fx:id="colUnit" prefWidth="133.0" text="Unit" />
+            <TableColumn fx:id="colQty" prefWidth="140.0" text="QTY" />
+            <TableColumn fx:id="colPrice" prefWidth="156.0" text="Price" />
+            <TableColumn fx:id="colRemove" prefWidth="108.0" text="Remove" />
+         </columns>
+      </TableView>
+      <Label layoutX="54.0" layoutY="259.0" text="Recipe" textFill="#ff7197">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="addBtn" buttonType="RAISED" layoutX="806.0" layoutY="208.0" onMouseClicked="#addRecipe" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #ff7197;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="66.0" layoutY="37.0" text="Puddings &amp; Cakes Companay Management System">
+         <font>
+            <Font name="Segoe UI Semibold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="170.0" prefHeight="21.0" prefWidth="114.0" text="Add Recipe To :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbIngreName" focusColor="#ff7197" layoutX="56.0" layoutY="208.0" prefHeight="25.0" prefWidth="190.0" promptText="Ingredient Name" unFocusColor="#ff7197" />
+      <JFXComboBox fx:id="cmbCakeID" focusColor="#ff7197" layoutX="56.0" layoutY="126.0" prefHeight="25.0" prefWidth="145.0" promptText="Cake ID" unFocusColor="#ff7197" />
+      <Label layoutX="176.0" layoutY="170.0" prefHeight="21.0" prefWidth="51.0" text="C-001" textFill="#ff7197">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUnit" disable="true" layoutX="413.0" layoutY="208.0" prefHeight="27.0" prefWidth="98.0" promptText="Unit" style="-fx-background-color: white; -fx-border-color: #ff7197;" />
+      <TextField fx:id="txtqty" layoutX="674.0" layoutY="208.0" prefHeight="27.0" prefWidth="98.0" promptText="QTY" style="-fx-background-color: white; -fx-border-color: #ff7197;" />
+      <Label layoutX="413.0" layoutY="181.0" prefHeight="21.0" prefWidth="42.0" text="Unit" textFill="#ff7197">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="543.0" layoutY="181.0" prefHeight="21.0" prefWidth="72.0" text="Unit Price" textFill="#ff7197">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbQTY" layoutX="674.0" layoutY="181.0" prefHeight="21.0" prefWidth="42.0" text="QTY" textFill="#ff7197">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtID" disable="true" layoutX="282.0" layoutY="208.0" prefHeight="27.0" prefWidth="98.0" promptText="ID" style="-fx-background-color: white; -fx-border-color: #ff7197;" />
+      <Label layoutX="282.0" layoutY="181.0" prefHeight="21.0" prefWidth="42.0" text="ID" textFill="#ff7197">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
